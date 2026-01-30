@@ -638,7 +638,6 @@ a {
 /* === TECH STACK WRAPPER SECTION === */
 .tech-stack-wrapper {
   padding: 4rem 0 0 0;
-  background: var(--bg-dark);
   position: relative;
   z-index: 2;
   opacity: 0;
