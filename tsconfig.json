@@ -1,0 +1,8 @@
+// tsconfig.json
+
+{
+  "compilerOptions": {
+    // ... opsi lainnya
+    "forceConsistentCasingInFileNames": true
+  }
+}

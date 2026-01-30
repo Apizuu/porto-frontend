@@ -1,0 +1,92 @@
+/* Moving Stars Styles */
+
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Bintang Dasar */
+.star {
+  position: absolute;
+  background: radial-gradient(circle, #ffffff 0%, rgba(255, 255, 255, 0.8) 50%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 2px rgba(255, 255, 255, 0.8),
+    0 0 4px rgba(163, 113, 247, 0.4);
+}
+
+/* Bintang Besar dengan Glow Lebih Terang */
+.star.star-large {
+  box-shadow: 
+    0 0 4px rgba(255, 255, 255, 1),
+    0 0 8px rgba(163, 113, 247, 0.6),
+    0 0 12px rgba(217, 70, 239, 0.4);
+}
+
+/* Animasi Kedipan (Twinkle) */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    filter: brightness(0.8);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+  25%, 75% {
+    opacity: 0.6;
+    filter: brightness(1);
+  }
+}
+
+/* Animasi Melayang (Float) */
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, -10px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  75% {
+    transform: translate(-15px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+  .star {
+    width: 1px !important;
+    height: 1px !important;
+  }
+  
+  .shooting-star {
+    display: none;
+  }
+}
+
+/* Optimasi performa */
+.star,
+.shooting-star {
+  will-change: transform, opacity;
+}
+
+/* Dark mode enhancement */
+@media (prefers-color-scheme: dark) {
+  .star {
+    box-shadow: 
+      0 0 3px rgba(255, 255, 255, 1),
+      0 0 6px rgba(163, 113, 247, 0.5);
+  }
+}
