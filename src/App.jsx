@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import MovingStars from './animations/MovingStars';
-import TechStackCarousel from './TechStackCarousel';
+import TechStackCarousel from './Techstackcarousel';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
