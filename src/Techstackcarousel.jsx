@@ -1,5 +1,5 @@
 import React from 'react';
-import './TechStackCarousel.css';
+import './Techstackcarousel.css';
 
 // Import icons from react-icons/si (Simple Icons)
 // Install with: npm install react-icons
